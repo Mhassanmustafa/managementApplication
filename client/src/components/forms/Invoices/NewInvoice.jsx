@@ -103,7 +103,7 @@ const NewInvoice = () => {
       .then(res => {
         // alert("added");
         console.log("data inserted");
-        localStorage.removeItem("CustomerInfo");
+        //  localStorage.removeItem("CustomerInfo");
         setaFlag(true);
       })
       .catch(e => {
@@ -346,6 +346,7 @@ const NewInvoice = () => {
                   additemps();
                   let info = { name: custName, phoneno: phoneno };
                   localStorage.setItem("CustomerInfo", JSON.stringify(info));
+                  addnewCustomerinDatabase();
                   window.location.reload(false);
                 }
               }}
@@ -457,7 +458,7 @@ const NewInvoice = () => {
                 console.log(value);
                 setDebit(value);
 
-                addnewCustomerinDatabase();
+                // addnewCustomerinDatabase();
                 insertOrder();
                 insertLedgerData(value);
                 getTempDeleted();

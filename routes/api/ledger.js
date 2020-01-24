@@ -11,7 +11,7 @@ async function getId(name) {
   let cust = new customers();
   console.log(name);
   let resu = await cust.getCustomerId(name);
-  if (!resu) return res.send("there is costomer with this id");
+  if (!resu) return "there is costomer with this id";
   return resu._id;
 }
 
@@ -19,8 +19,9 @@ async function getOrderId(id) {
   let ord = new order();
 
   let result = await ord.getOrders(id);
-  if (!result)
-    return res.send("there is no order present in with this customer id");
+  if (!result) {
+    result = await ord.getOrders(id);
+  }
 
   return result._id;
 }

@@ -195,13 +195,25 @@ router.get("/getPurchasePrice/:name", (req, res) => {
 });
 
 //to delete a product completely from the data base
-router.delete("/deleteProduct/:name", auth, (req, res) => {
+router.delete("/deleteProduct/:name", auth, async (req, res) => {
   //make a new object of the product
+  const stocks = new stock();
 
   const pro = new product();
-  let result = pro.delectProduct(req.params.name);
-
-  result
+  let id = await pro.getProductid(req.params.name);
+  await stocks.deleteStock(id).catch(async e => {
+    await pro
+      .delectProduct(req.params.name)
+      .then(result => {
+        res.send("product deleted successfully");
+      })
+      .catch(e => {
+        res.send("Deletion unsuccessfull as product of this name is not found");
+        throw e;
+      });
+  });
+  await pro
+    .delectProduct(req.params.name)
     .then(result => {
       res.send("product deleted successfully");
     })

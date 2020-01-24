@@ -1,0 +1,252 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/*custom style sheet*/
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+
+a,
+a:hover,
+a:focus {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+#homeSubmenu li a,
+.color li a {
+  color: gray;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #222d32;
+  color: #b8c7ce;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 10px;
+  background: #367fa9;
+  color: white;
+}
+
+#sidebar ul.components {
+  padding: 27px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding-top: 22px;
+  padding-left: 15px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+  background-color: inherit;
+  color: #f0f8ff;
+  background: inherit;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: white;
+  background: #222d32;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #2c3b41;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: white;
+}
+
+a.article,
+a.article:hover {
+  background-color: inherit;
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+.active {
+  background-color: gray;
+}
+/* ---------------------------------------------------
+    user panel
+----------------------------------------------------- */
+.user-panel {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.left-style {
+  float: left;
+  max-width: 45px;
+}
+
+.left-content {
+  line-height: 0;
+  position: absolute;
+  left: 55px;
+}
+
+.header {
+  padding: 10px;
+  font-size: smaller;
+  background: #1a2226;
+  color: #4b646f;
+}
+
+.topbar .navbar-search {
+  width: 25rem;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+/* ---------------------------------------------------
+    pop up menus css
+----------------------------------------------------- */
+.pop {
+  font-size: 12px;
+}
+.pop > .header1 {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.pop > .content1 {
+  width: 100%;
+  padding: 10px 5px;
+}
+.pop > .actions1 {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.pop > .close1 {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.hidden {
+  display: none;
+}
+
+#invoiceLable {
+  padding-right: 5px;
+  padding-top: 7px;
+}
+
+.loginback {
+  background-color: #4b646f;
+}

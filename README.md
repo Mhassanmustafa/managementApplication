@@ -1,0 +1,2 @@
+# managementApp
+Semester project

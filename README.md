@@ -150,10 +150,14 @@ go to URL # [http://localhost:4000](http://localhost:4000)
 - heroku
 - MongoDB Atlas
 
-# contribution made in api routes ledger and stocks
+# Contribution made in api routes ledger and stocks
 
 - [Rawaha khan](https://github.com/RawahaKhan) 
 - [M Rafay khalid](https://github.com/raffyman)
+
+
+# Thanks to
+- [Haider Ali Khichi](https://github.com/candh) 
 
 # By
 
